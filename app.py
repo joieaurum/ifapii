@@ -26,7 +26,7 @@ def preprocess(model_data):
             "message": "No Trained Model Found"
         }), 403
 
-@app.route('/predict', methods=['GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
     claim = request.json.get("property_claim")
     model_data = {
